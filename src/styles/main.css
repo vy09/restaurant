@@ -21,6 +21,7 @@ img {
 body {
   font-family: Caudex, serif;
   background-color: var(--bg);
+  min-width: 300px;
 }
 nav {
   background-color: var(--color2);
@@ -109,9 +110,9 @@ a:hover {
   margin-bottom: 50px;
 }
 /* card */
-.card-list {
+#data {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   max-width: 1250px;
   margin: 150px auto;
   padding: 20px;
