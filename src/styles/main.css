@@ -30,31 +30,35 @@ nav {
 }
 label.logo {
   color: white;
-  font-size: 35px;
+  font-size: 30px;
   line-height: 80px;
   padding: 0 100px;
   font-weight: bold;
 }
 nav ul {
   float: right;
-  margin-right: 20px;
+  margin-right: 6rem;
 }
 nav ul li {
   display: inline-block;
   line-height: 80px;
-  margin: 0 5px;
+  margin: 0 15px;
 }
 nav ul li a {
   color: white;
   font-size: 17px;
-  padding: 7px 13px;
+  /* padding: 7px 13px; */
   border-radius: 3px;
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-block;
+  text-decoration: none;
 }
-a.active,
+/* a.active,
 a:hover {
   background: #1b9bff;
   transition: 0.5s;
-}
+} */
 .checkbtn {
   font-size: 30px;
   color: white;
@@ -64,6 +68,9 @@ a:hover {
   cursor: pointer;
   display: none;
 }
+i {
+  display: inline-block;
+}
 #check {
   display: none;
 }
@@ -71,24 +78,25 @@ a:hover {
 .contain {
   display: flex;
   align-items: center;
-  min-height: 380px;
+  min-height: 450px;
   width: 100%;
   text-align: center;
   background-position: center;
   background-color: Black !important;
+  z-index: 100;
 }
 .containner {
   margin: 0 auto;
   max-width: 800px;
 }
 .contain_title {
-  color: #fff;
+  color: var(--white);
   font-weight: 600;
   font-size: 36px;
   text-shadow: 1px 1px #141414;
 }
 .contain_subtitle {
-  color: #fff;
+  color: var(--white);
   margin-top: 16px;
   font-size: 18px;
   font-weight: 600;
@@ -119,7 +127,7 @@ a:hover {
   gap: 20px;
 }
 .card-list .card-item {
-  background: #fff;
+  background: var(--color);
   padding: 26px;
   border-radius: 8px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
@@ -140,7 +148,7 @@ a:hover {
 }
 .card-item .item_rating {
   display: inline-block;
-  background: #f7dff5;
+  background: var(--button);
   margin-top: 32px;
   padding: 8px 15px;
   font-size: 0.75rem;
@@ -149,22 +157,23 @@ a:hover {
 }
 .card-item .city {
   display: inline-block;
-  background: #f7dff5;
+  background: var(--button);
   margin-top: 32px;
   padding: 8px 15px;
   font-size: 0.75rem;
   border-radius: 50px;
   font-weight: 600;
 }
-.card-item .item_title {
+.card-item .item_title a {
   color: #000;
   font-size: 1.438rem;
   margin-top: 28px;
   font-weight: 600;
+  text-decoration: none;
 }
 
 footer {
-  background-color: #135ea8;
+  background-color: var(--color2);
   color: white;
   font-size: 14px;
   padding: 2em;
@@ -192,6 +201,7 @@ footer {
   }
   nav ul li a {
     font-size: 16px;
+    text-decoration: none;
   }
 }
 
