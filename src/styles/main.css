@@ -59,17 +59,27 @@ a:hover {
   background: #1b9bff;
   transition: 0.5s;
 } */
-.checkbtn {
+#check {
   font-size: 30px;
   color: white;
   float: right;
-  line-height: 80px;
+  /* line-height: 80px; */
   margin-right: 40px;
   cursor: pointer;
   display: none;
+  height: 44px;
+  border: 0px;
+  margin-top: 18px;
+  background: none;
 }
 i {
   display: inline-block;
+}
+a{
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-block;
+  align-items: center;
 }
 #check {
   display: none;
@@ -167,7 +177,8 @@ i {
 .card-item .item_title a {
   color: #000;
   font-size: 1.438rem;
-  margin-top: 28px;
+  margin-top: 14px;
+  margin-bottom: 14px;
   font-weight: 600;
   text-decoration: none;
 }
@@ -206,7 +217,7 @@ footer {
 }
 
 @media (max-width: 858px) {
-  .checkbtn {
+  #check {
     display: block;
   }
   ul {
@@ -232,8 +243,23 @@ footer {
     background: none;
     color: #0082e6;
   }
-  #check:checked ~ ul {
+  #check.fas.fa-bars{
+    display: inline-block;
+    min-height: 44px;
+    min-width: 44px;
+  }
+  #check.fas.fa-bars::before{
+    display: inline-block;
+    margin-top: 5px;
+    min-height: 44px;
+    min-width: 44px;
+  }
+  #check:focus ~ ul, ul:target {
     left: 0;
+  }
+
+  button#check:focus {
+    outline: none;
   }
   .card-list {
     margin: 0 auto;
