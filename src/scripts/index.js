@@ -24,4 +24,10 @@ import("../public/data/DATA.json").then(({ default: jsonData }) => {
         `;
   });
   document.querySelector("#data").innerHTML = dataList;
+
+  const hamburgerButton = document.querySelector("#check");
+
+  hamburgerButton.addEventListener("click", () => {
+    hamburgerButton.classList.toggle("active");
+  });
 });

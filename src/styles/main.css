@@ -77,7 +77,7 @@ i {
   width: 100%;
   min-height: 40px;
 }
-a{
+a {
   min-width: 44px;
   min-height: 44px;
   display: inline-block;
@@ -165,18 +165,22 @@ a{
   background: var(--button);
   margin-top: 32px;
   padding: 8px 15px;
-  font-size: 0.75rem;
-  border-radius: 50px;
+  font-size: 0.8rem;
+  border-radius: 5px;
   font-weight: 600;
+  min-height: 44px;
+  text-align: center;
 }
 .card-item .city {
   display: inline-block;
   background: var(--button);
   margin-top: 32px;
   padding: 8px 15px;
-  font-size: 0.75rem;
-  border-radius: 50px;
+  font-size: 0.8rem;
+  border-radius: 5px;
   font-weight: 600;
+  min-height: 44px;
+  text-align: center;
 }
 .card-item .item_title a {
   color: #000;
@@ -248,18 +252,19 @@ footer {
     background: none;
     color: #0082e6;
   }
-  #check.fas.fa-bars{
+  #check.fas.fa-bars {
     display: inline-block;
     min-height: 44px;
     min-width: 44px;
   }
-  #check.fas.fa-bars::before{
+  #check.fas.fa-bars::before {
     display: inline-block;
     margin-top: 5px;
     min-height: 44px;
     min-width: 44px;
   }
-  #check:focus ~ ul, ul:target {
+  #check:focus ~ ul,
+  ul:target {
     left: 0;
   }
 
