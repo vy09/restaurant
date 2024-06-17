@@ -12,7 +12,7 @@
     <link rel="manifest" href="app.webmanifest" />
     <link
       rel="icon"
-      href="../public/images/icons/icon-72x72.png"
+      href="../images/icons/icon-72x72.png"
       type="image/x-icon"
     />
   </head>
@@ -35,25 +35,24 @@
       </ul>
     </nav>
     <picture>
-      <source media="(max-width: 600px)" srcset="./images/hero-image_4.jpg">
+      <source
+        media="(max-width: 450px)"
+        srcset="./images/hero-image_4-small.jpg"
+      />
       <img
-      src="/images/heros/hero-image_4.jpg" 
-      class="contain"
-      style="
-        background-image: linear-gradient(
-            rgba(0, 0, 5, 0.5),
-            rgba(0, 0, 5, 0.5)
-          ),
-          
-      ">
+        class="lazyload"
+        src="./images/hero-image_4-large.jpg"
+        id="contain"
+        alt="dirt rally poster"
+        crossorigin="anonymous"
+      />
     </picture>
-      <div class="containner">
-        <h1 class="contain_title">Harapeko Apps</h1>
-        <p class="contain_subtitle">
-          Find the best restaurants only on the best websites.
-        </p>
-      </div>
-    </picture>
+    <div class="containner">
+      <h1 class="contain_title">Harapeko Apps</h1>
+      <p class="contain_subtitle">
+        Find the best restaurants only on the best websites.
+      </p>
+    </div>
     <section class="content" id="content">
       <div class="latest">
         <div class="card-list">
