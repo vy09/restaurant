@@ -101,7 +101,7 @@ a {
   align-items: center;
   text-decoration: none;
 }
-.contain {
+#contain.lazyload {
   display: flex;
   align-items: center;
   min-height: 450px;
@@ -110,7 +110,9 @@ a {
   background-position: center;
   background-color: Black !important;
   z-index: 100;
+  background-image: linear-gradient(rgba(0, 0, 5, 0.5), rgba(0, 0, 5, 0.5));
 }
+  
 .containner {
   margin: 0 auto;
   max-width: 800px;
@@ -121,6 +123,7 @@ a {
   font-size: 36px;
   text-shadow: 1px 1px #141414;
 }
+
 .contain_subtitle {
   color: var(--white);
   margin-top: 16px;
@@ -305,7 +308,7 @@ footer {
     display: inline-block;
     min-width: 44px;
     min-height: 44px;
-    }
+  }
   ul {
     position: fixed;
     width: 100%;
