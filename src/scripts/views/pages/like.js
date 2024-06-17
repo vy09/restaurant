@@ -1,7 +1,8 @@
+/* eslint-disable no-new */
 import FavoriteRestaurant from '../../data/resto-fav';
-import FavoriteRestaurantView from "./fav-like-rest/fav-rest-view";
-import FavoriteRestaurantShowPresenter from "./fav-like-rest/fav-rest-show";
-import FavoriteRestaurantSearchPresenter from "./fav-like-rest/fav-rest-search";
+import FavoriteRestaurantView from './fav-like-rest/fav-rest-view';
+import FavoriteRestaurantShowPresenter from './fav-like-rest/fav-rest-show';
+import FavoriteRestaurantSearchPresenter from './fav-like-rest/fav-rest-search';
 
 const view = new FavoriteRestaurantView();
 

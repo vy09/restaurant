@@ -8,9 +8,9 @@ const config = {
   // The glob patterns Jest uses to detect test files
   testMatch: ['**/tests/**/*.test.[jt]s'],
   // The test environment that will be used for testing
-  
+
   setupFiles: ['fake-indexeddb/auto'],
-  
+
   testEnvironment: 'jsdom',
 
   verbose: true,
