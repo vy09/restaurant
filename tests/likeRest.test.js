@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 import { spyOn } from 'jest-mock';
-import FavoriteRestaurantIdb from '../src/scripts/data/resto-fav';
+import FavoriteRestaurant from '../src/scripts/data/resto-fav';
 import * as TestFactories from './helper/testFactories';
 
 describe('Liking A Restaurant', () => {
@@ -11,7 +11,7 @@ describe('Liking A Restaurant', () => {
   beforeEach(() => {
     addLikeButtonContainer();
 
-    spyOn(FavoriteRestaurantIdb, 'searchRestaurants');
+    spyOn(FavoriteRestaurant, 'searchRestaurants');
   });
 
   it('should show the like button when the restaurant has not been liked before', async () => {
@@ -31,22 +31,22 @@ describe('Liking A Restaurant', () => {
 
     document.querySelector('#likeButton').dispatchEvent(new Event('click'));
 
-    const restaurant = await FavoriteRestaurantIdb.getRestaurant(1);
+    const restaurant = await FavoriteRestaurant.getRestaurant(1);
     expect(restaurant).toEqual({ id: 1 });
 
-    await FavoriteRestaurantIdb.deleteRestaurant(1);
+    await FavoriteRestaurant.deleteRestaurant(1);
   });
 
   it('should not add a restaurant again when its already liked', async () => {
     await TestFactories.createLikeButtonWithRestaurant({ id: 1 });
 
-    await FavoriteRestaurantIdb.putRestaurant({ id: 1 });
+    await FavoriteRestaurant.putRestaurant({ id: 1 });
 
     document.querySelector('#likeButton').dispatchEvent(new Event('click'));
 
-    expect(await FavoriteRestaurantIdb.getAllRestaurant()).toEqual([{ id: 1 }]);
+    expect(await FavoriteRestaurant.getAllRestaurant()).toEqual([{ id: 1 }]);
 
-    await FavoriteRestaurantIdb.deleteRestaurant(1);
+    await FavoriteRestaurant.deleteRestaurant(1);
   });
 
   it('should not add a Restaurant when it has no id', async () => {
@@ -54,6 +54,6 @@ describe('Liking A Restaurant', () => {
 
     document.querySelector('#likeButton').dispatchEvent(new Event('click'));
 
-    expect(await FavoriteRestaurantIdb.getAllRestaurant()).toEqual([]);
+    expect(await FavoriteRestaurant.getAllRestaurant()).toEqual([]);
   });
 });
