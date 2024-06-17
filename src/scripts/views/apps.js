@@ -3,12 +3,12 @@ import UrlParser from '../routes/parser';
 import routes from '../routes/routes';
 
 class App {
-  constructor({ button, drawer, content }) {
-    this._button = button;
+  constructor({ check, drawer, content }) {
+    this._button = check;
     this._drawer = drawer;
     this._content = content;
 
-    this._initialAppShell();
+    // this._initialAppShell();
   }
 
   //   _initialAppShell() {
@@ -24,6 +24,13 @@ class App {
     const page = routes[url];
     this._content.innerHTML = await page.render();
     await page.afterRender();
+    const skipLink = document.querySelector('.skip-link');
+    const mainContent = document.querySelector('#mainContent');
+
+    skipLink.addEventListener('click', (event) => {
+      event.preventDefault();
+      mainContent.focus();
+    });
   }
 }
 

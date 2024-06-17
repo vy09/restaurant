@@ -2,6 +2,7 @@
 import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.css';
 import App from './views/apps';
+import swRegister from './utils/sw-register';
 import CONFIG from './dataGlobal/config';
 
 // import('../public/data/DATA.json').then(({ default: jsonData }) => {
@@ -35,7 +36,7 @@ import CONFIG from './dataGlobal/config';
 //   });
 // });
 const app = new App({
-  button: document.querySelector('#hamburgerButton'),
+  check: document.querySelector('#hamburgerButton'),
   drawer: document.querySelector('#navigationDrawer'),
   content: document.querySelector('#mainContent'),
 });
@@ -46,6 +47,5 @@ window.addEventListener('hashchange', () => {
 
 window.addEventListener('load', () => {
   app.renderPage();
-  // swRegister();
-  // WebSocketInitiator.init(CONFIG.WEB_SOCKET_SERVER);
+  swRegister();
 });

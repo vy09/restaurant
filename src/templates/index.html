@@ -6,17 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
+    <link rel="manifest" href="app.webmanifest" />
+    <link
+      rel="icon"
+      href="../public/images/icons/icon-72x72.png"
+      type="image/x-icon"
     />
   </head>
   <body>
     <a href="#content" class="skip-link">Skip to content ?</a>
     <nav>
-      <button id="check" class="fas fa-bars"></button>
+      <button id="check" class="fa fa-bars"></button>
 
       <label class="logo">Harapeko</label>
       <ul>
-        <li><a class="active" href="/home">Home</a></li>
+        <li><a class="active" href="#/">Home</a></li>
         <li><a class="active" href="#/like">Favorite</a></li>
         <li>
           <a
@@ -27,31 +34,31 @@
         </li>
       </ul>
     </nav>
-    <div
+    <picture>
+      <source media="(max-width: 600px)" srcset="./images/hero-image_4.jpg">
+      <img
+      src="/images/heros/hero-image_4.jpg" 
       class="contain"
       style="
         background-image: linear-gradient(
             rgba(0, 0, 5, 0.5),
             rgba(0, 0, 5, 0.5)
           ),
-          url('..//public/images/heros/hero-image_4.jpg');
-      "
-    >
+          
+      ">
+    </picture>
       <div class="containner">
         <h1 class="contain_title">Harapeko Apps</h1>
         <p class="contain_subtitle">
           Find the best restaurants only on the best websites.
         </p>
       </div>
-    </div>
+    </picture>
     <section class="content" id="content">
       <div class="latest">
-        <h1>Recomendation Restaurant</h1>
         <div class="card-list">
-          <div id="data"></div>
-          <main id="mainContent"></main>
+          <main id="mainContent" tabindex="-1"></main>
         </div>
-        
       </div>
     </section>
     <footer>

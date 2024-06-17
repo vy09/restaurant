@@ -4,9 +4,10 @@ import { createRestaurantItemTemplate } from '../template/template-creator';
 const Home = {
   async render() {
     return `
-      <div class="content">
+      <div id="content" class="content">
         <h2 class="content__heading"></h2>
-        <div id="restaurants" class="restaurants">
+        <h1>Recomendation Restaurant</h1>
+        <div id="card" class="card">
         </div>
       </div>
     `;
@@ -14,7 +15,7 @@ const Home = {
 
   async afterRender() {
     const restaurants = await RestaurantSource.homeRestaurants();
-    const restaurantsContainer = document.querySelector('#restaurants');
+    const restaurantsContainer = document.querySelector('#card');
     restaurants.forEach((restaurant) => {
       restaurantsContainer.innerHTML += createRestaurantItemTemplate(restaurant);
     });

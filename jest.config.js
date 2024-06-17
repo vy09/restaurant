@@ -5,15 +5,10 @@
 
 /** @type {import('jest').Config} */
 const config = {
-  testMatch: [
-    '**/tests/**/*.test.[jt]s?(x)',
-  ],
-
-  setupFiles: ['fake-indexeddb/auto'],
-
+  // The glob patterns Jest uses to detect test files
+  testMatch: ['**/tests/**/*.test.[jt]s'],
   // The test environment that will be used for testing
   testEnvironment: 'jsdom',
-
   // A map from regular expressions to paths to transformers
   transform: {
     '^.+\\.(js|ts)$': 'babel-jest',

@@ -27,6 +27,8 @@ nav {
   background-color: var(--color2);
   height: 80px;
   width: 100%;
+  min-width: 44px;
+  min-height: 44px;
 }
 label.logo {
   color: white;
@@ -50,9 +52,13 @@ nav ul li a {
   /* padding: 7px 13px; */
   border-radius: 3px;
   min-width: 44px;
-  min-height: 44px;
+  max-height: 44px;
   display: inline-block;
   text-decoration: none;
+}
+button#check.fa.fa-bars::before {
+  min-width: 44px;
+  min-height: 44px;
 }
 /* a.active,
 a:hover {
@@ -75,7 +81,7 @@ a:hover {
 i {
   display: inline-block;
   width: 100%;
-  min-height: 40px;
+  min-height: 44px;
 }
 a {
   min-width: 44px;
@@ -88,7 +94,13 @@ a {
   min-width: 40px;
   min-height: 40px;
 }
-
+.a2 {
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-block;
+  align-items: center;
+  text-decoration: none;
+}
 .contain {
   display: flex;
   align-items: center;
@@ -119,6 +131,8 @@ a {
 
 .content {
   margin: 150px auto;
+  align-items: center;
+  justify-content: center;
 }
 .latest {
   width: 100%;
@@ -132,7 +146,7 @@ a {
   margin-bottom: 50px;
 }
 /* card */
-#data {
+.card {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   max-width: 1250px;
@@ -192,11 +206,72 @@ a {
   height: 44px;
 }
 
+.like1 {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  padding-top: 16px;
+  align-items: center;
+  justify-content: center;
+  background-color: #db0000;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+.like2 {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  padding-top: 16px;
+  align-items: center;
+  justify-content: center;
+  background-color: #db0000;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
+.card2 {
+  display: grid;
+  background-color: var(--color2);
+  width: 70%;
+  margin: 150px auto;
+  padding: 20px;
+  gap: 20px;
+  border-radius: 8px;
+}
+.card2.card-item2 {
+  background: var(--color);
+  padding: 26px;
+  border-radius: 8px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
+  list-style: none;
+  cursor: pointer;
+  text-decoration: none;
+  border: 2px solid transparent;
+  transition: border 0.5s ease;
+}
+.card-item-pic2 {
+  width: 80%;
+  aspect-ratio: 16/9;
+  border-radius: 8px;
+  object-fit: cover;
+}
 footer {
   background-color: var(--color2);
   color: white;
   font-size: 14px;
   padding: 2em;
+  padding: 16px;
   width: 100%;
   text-align: center;
 }
@@ -227,8 +302,10 @@ footer {
 
 @media (max-width: 858px) {
   #check {
-    display: block;
-  }
+    display: inline-block;
+    min-width: 44px;
+    min-height: 44px;
+    }
   ul {
     position: fixed;
     width: 100%;
@@ -252,12 +329,12 @@ footer {
     background: none;
     color: #0082e6;
   }
-  #check.fas.fa-bars {
+  #check.fa.fa-bars {
     display: inline-block;
     min-height: 44px;
     min-width: 44px;
   }
-  #check.fas.fa-bars::before {
+  #check.fa.fa-bars::before {
     display: inline-block;
     margin-top: 5px;
     min-height: 44px;

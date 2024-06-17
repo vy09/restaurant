@@ -4,7 +4,6 @@ import Like from '../views/pages/like';
 
 const routes = {
   '/': Home, // default page
-  '/home': Home,
   '/detail/:id': Detail,
   '/like': Like,
 };
