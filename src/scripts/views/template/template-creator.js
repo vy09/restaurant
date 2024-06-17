@@ -2,7 +2,9 @@ import CONFIG from '../../dataGlobal/config';
 
 const createRestaurantDetailTemplate = (restaurant) => `
 <div class="card-item2">
-  <img class="card-item-pic" src="${CONFIG.BASE_IMAGE_URL + restaurant.restaurant.pictureId}" alt="${restaurant.restaurant.name}" />
+  <img class="card-item-pic" src="${
+  CONFIG.BASE_IMAGE_URL + restaurant.restaurant.pictureId
+}" alt="${restaurant.restaurant.name}" />
   <h1>${restaurant.restaurant.name}</h1>
   <p>Rating : <b>${restaurant.restaurant.rating}⭐️</b></p>
   <h3>Alamat</h3>
@@ -12,9 +14,13 @@ const createRestaurantDetailTemplate = (restaurant) => `
   <h3>Deskripsi</h3>
   <p>${restaurant.restaurant.description}</p>
   <h3>Menu Makanan</h3>
-  <p>${restaurant.restaurant.menus.foods.map((food) => food.name).join(', ')}</p>
+  <p>${restaurant.restaurant.menus.foods
+    .map((food) => food.name)
+    .join(', ')}</p>
   <h3>Menu Minuman</h3>
-  <p>${restaurant.restaurant.menus.drinks.map((food) => food.name).join(', ')}</p>
+  <p>${restaurant.restaurant.menus.drinks
+    .map((food) => food.name)
+    .join(', ')}</p>
   <h3>Customer Review</h3>
   ${restaurant.restaurant.customerReviews.map(
     (review) => `
@@ -31,12 +37,18 @@ const createRestaurantDetailTemplate = (restaurant) => `
 
 const createRestaurantItemTemplate = (restaurant) => `
   <div class="card-item">
-      <img class="card-item-pic" alt="${restaurant.name}"
-      src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}">     
+      <img class="lazyload" id="card-item-pic" alt="${restaurant.name}"
+      src="${
+  CONFIG.BASE_IMAGE_URL + restaurant.pictureId
+}" crossorigin="anonymous">     
       <div class="item_rating">
-        <p>rating:<span class="restaurant-item__header__rating__score">${restaurant.rating}</span>⭐️</p>
+        <p>rating:<span class="restaurant-item__header__rating__score">${
+  restaurant.rating
+}</span>⭐️</p>
       </div>
-      <h2 class="restaurant__title"><a class="a2" href="/#/detail/${restaurant.id}">${restaurant.name}</a></h2>
+      <h2 class="restaurant__title"><a class="a2" href="/#/detail/${
+  restaurant.id
+}">${restaurant.name}</a></h2>
       <p>${restaurant.description}</p>
     </div>
   </div>

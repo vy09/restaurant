@@ -94,7 +94,7 @@ a {
   min-width: 40px;
   min-height: 40px;
 }
-.a2{
+.a2 {
   min-width: 44px;
   min-height: 44px;
   display: inline-block;
@@ -112,7 +112,7 @@ a {
   z-index: 100;
   background-image: linear-gradient(rgba(0, 0, 5, 0.5), rgba(0, 0, 5, 0.5));
 }
-  
+
 .containner {
   margin: 0 auto;
   max-width: 800px;
@@ -171,7 +171,7 @@ a {
 .card-list .card-item:hover {
   border: 2px solid #000;
 }
-.card-list .card-item-pic {
+.card-list #card-item-pic {
   width: 100%;
   aspect-ratio: 16/9;
   border-radius: 8px;
@@ -263,7 +263,7 @@ a {
   border: 2px solid transparent;
   transition: border 0.5s ease;
 }
-.card-item-pic2 {
+#card-item-pic2 {
   width: 80%;
   aspect-ratio: 16/9;
   border-radius: 8px;
