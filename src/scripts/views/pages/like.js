@@ -1,7 +1,7 @@
-/* eslint-disable no-new */
-import FavoriteRestaurantView from './fav-like-rest/fav-rest-view';
-import FavoriteRestaurantShowPresenter from './fav-like-rest/fav-rest-show';
-import FavoriteRestaurantSearchPresenter from './fav-like-rest/fav-rest-search';
+import FavoriteRestaurant from '../../data/resto-fav';
+import FavoriteRestaurantView from "./fav-like-rest/fav-rest-view";
+import FavoriteRestaurantShowPresenter from "./fav-like-rest/fav-rest-show";
+import FavoriteRestaurantSearchPresenter from "./fav-like-rest/fav-rest-search";
 
 const view = new FavoriteRestaurantView();
 
@@ -11,8 +11,8 @@ const Like = {
   },
 
   async afterRender() {
-    new FavoriteRestaurantShowPresenter({ view, favoriteRestaurants: FavoriteRestaurantView });
-    new FavoriteRestaurantSearchPresenter({ view, favoriteRestaurants: FavoriteRestaurantView });
+    new FavoriteRestaurantShowPresenter({ view, favoriteRestaurants: FavoriteRestaurant });
+    new FavoriteRestaurantSearchPresenter({ view, favoriteRestaurants: FavoriteRestaurant });
   },
 };
 
